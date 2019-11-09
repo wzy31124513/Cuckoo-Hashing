@@ -11,6 +11,7 @@ using namespace std;
 __host__ __device__
 unsigned hash_func(unsigned key, int hash_num, unsigned tablesize){
 	int c2=0x27d4eb2d;
+	switch (hash_num){
 		case 0:
   			key = (key+0x7ed55d16) + (key<<12);
   			key = (key^0xc761c23c) ^ (key>>19);
